@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "json"
 require "uri"
 require "net/http"
 require "nokogiri"
@@ -35,6 +36,20 @@ module Calendar
 
     def document
       @document ||= Nokogiri::HTML(encoded_body)
+    end
+
+    def calendar_board_cards
+      document.css("div.calBoardCards > div.calBoardCardsBody > div.c_calBoardCard")
+    end
+
+    def cards
+      @cards ||= calendar_board_cards.map { |n| Card.new(n) }
+    end
+
+    def to_hash
+      {
+        cards: cards.map(&:to_hash)
+      }
     end
   end
 end
