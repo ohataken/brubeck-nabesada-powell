@@ -3,6 +3,7 @@
 require "uri"
 require "net/http"
 require "nokogiri"
+require_relative "card"
 
 module Calendar
   class Calendar
