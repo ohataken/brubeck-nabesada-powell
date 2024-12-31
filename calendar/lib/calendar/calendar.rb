@@ -6,12 +6,18 @@ require "nokogiri"
 
 module Calendar
   class Calendar
+    attr_accessor :id
+
+    def initialize id
+      @id = id
+    end
+
     def hostname
       ENV.fetch("CALENDAR_HOSTNAME", "example.com")
     end
 
     def uri_string
-      "https://#{hostname}/calendar"
+      "https://#{hostname}/live/?cal=#{@id}"
     end
 
     def uri
