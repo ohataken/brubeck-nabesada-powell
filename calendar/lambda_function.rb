@@ -4,7 +4,7 @@ require "stringio"
 
 module LambdaFunction
   class Handler
-    def self.process(event:,context:)
+    def self.process(event:, context:)
       id = event["queryStringParameters"]["id"]
       calendar = Calendar::Calendar.new id
 
