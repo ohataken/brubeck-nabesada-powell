@@ -3,7 +3,7 @@ require "stringio"
 
 module LambdaFunction
   class Handler
-    def self.process(event:,context:)
+    def self.process(event:, context:)
       "Hello from Lambda!"
     end
   end
