@@ -12,7 +12,7 @@ module LambdaFunction
         isBase64Encoded: false,
         statusCode: 200,
         headers: {
-          "Cache-Control": "public, max-age=3600"
+          "Cache-Control": "public, max-age=86400"
         },
         body: calendar.to_hash.to_json
       }
