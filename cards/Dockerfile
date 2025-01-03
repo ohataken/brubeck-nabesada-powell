@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN gem install bundler:2.5.17 && \
+RUN gem install bundler:2.6.2 && \
     bundle install
 
 # Set runtime interface client as default command for the container runtime
