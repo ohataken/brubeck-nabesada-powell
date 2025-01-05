@@ -8,7 +8,7 @@ module LambdaFunction
       id = event["queryStringParameters"]["id"]
       date = Date.parse(id)
       calendar = Cards::Calendar.new date
-      card = calendar.cards.find { |c| c.date == date }
+      card = calendar.cards.find { |c| c.date == date } || {}
 
       {
         isBase64Encoded: false,
