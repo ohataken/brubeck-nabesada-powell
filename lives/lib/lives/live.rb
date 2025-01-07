@@ -58,7 +58,7 @@ module Lives
     end
 
     def member_nodes
-      event_required_definition_list[2].css("dd > p")
+      event_required_definition_list[2]&.css("dd > p") || []
     end
 
     def member
