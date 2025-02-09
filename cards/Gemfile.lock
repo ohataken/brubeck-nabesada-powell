@@ -52,6 +52,7 @@ GEM
     unicode-emoji (4.0.4)
 
 PLATFORMS
+  ruby
 
 DEPENDENCIES
   aws_lambda_ric
