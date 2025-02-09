@@ -53,7 +53,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-darwin-22
 
 DEPENDENCIES
   aws_lambda_ric
